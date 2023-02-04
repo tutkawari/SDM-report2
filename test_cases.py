@@ -19,15 +19,27 @@ class TestCalc (unittest.TestCase):
         #B=0
         def test_sample4 (self):
                 self.assertEqual (-1, calc(23,0))
-        #Bismax
+        #Aismax
         def test_sample5 (self):
+                self.assertEqual (999, calc(999,1))
+        #Ais1000
+        def test_sample6 (self):
+                self.assertEqual (-1, calc(1000,1))
+        #Bismax
+        def test_sample7 (self):
                 self.assertEqual (999, calc(1,999))
         #Bis1000
-        def test_sample6 (self):
+        def test_sample8 (self):
                 self.assertEqual (-1, calc(1,1000))
+        #A:string
+        def test_sample9 (self):
+                self.assertEqual (-1, calc('a',1))
         #B:string
-        def test_sample7 (self):
+        def test_sample10 (self):
                 self.assertEqual (-1, calc(3,'b'))
         #A is not int
-        def test_sample8 (self):
+        def test_sample11 (self):
                 self.assertEqual (-1, calc(0.1,999))
+        #B is not int
+        def test_sample12 (self):
+                self.assertEqual (-1, calc(999,0.1))
